@@ -107,11 +107,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gusta\\source\\repos\\Tetris2\\Tetris2\\Tetris2.csproj",
+      "projectUniqueName": "C:\\Users\\gusta\\Documents\\Github\\Tetris2\\Tetris2\\Tetris2.csproj",
       "projectName": "Tetris2",
-      "projectPath": "C:\\Users\\gusta\\source\\repos\\Tetris2\\Tetris2\\Tetris2.csproj",
+      "projectPath": "C:\\Users\\gusta\\Documents\\Github\\Tetris2\\Tetris2\\Tetris2.csproj",
       "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gusta\\source\\repos\\Tetris2\\Tetris2\\obj\\",
+      "outputPath": "C:\\Users\\gusta\\Documents\\Github\\Tetris2\\Tetris2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config",
