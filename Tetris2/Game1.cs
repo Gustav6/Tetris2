@@ -13,6 +13,7 @@ namespace Tetris2
         private int howManyRowsCleard;
         private SpriteFont font;
         private Texture2D endScreanTileTexture;
+        private bool pause;
 
         public Game1()
         {
@@ -59,21 +60,21 @@ namespace Tetris2
 
             Input.GetStateCall();
 
-            if (Input.HasBeenPressed(Keys.A))
+            if (Input.HasBeenPressed(Keys.Tab))
             {
-                Data.block = new Block();
+                pause = !pause;
             }
 
-            if (Data.block != null)
+            if (Data.block != null && !pause)
             {
                 Data.block.Update(gameTime);
 
-                if (!Data.block.IsBlockMoving())
+                if (!Data.block.IsBlockMoving(gameTime))
                 {
                     Data.block = null;
                 }
             }
-            else if (Data.block == null && !GameOver())
+            else if (Data.block == null && !GameOver() && !pause)
             {
                 SpawnBlock();
             }
@@ -95,19 +96,13 @@ namespace Tetris2
 
         public void SpawnBlock()
         {
-            for (int i = 0; i < Data.gameHeight; i++)
-            {
-                CheckTileMap();
-            }
-
+            CheckTileMap();
             Data.block = new Block();
         }
 
         public void CheckTileMap()
         {
-            // int y = 0; y < Data.gameHeight - howManyRowsCleard; y++
-            // int y = Data.gameHeight + howManyRowsCleard - 1; y >= 0; y--
-            for (int y = 0; y < Data.gameHeight - howManyRowsCleard; y++)
+            for (int y = 0; y < Data.gameHeight; y++)
             {
                 canClearRow = true;
 
@@ -116,6 +111,14 @@ namespace Tetris2
                     if (Data.tileMap[x, (Data.gameHeight - 1) - y].isSolid == false)
                     {
                         canClearRow = false;
+                    }
+                }
+
+                if (howManyRowsCleard != 0 && y != 0)
+                {
+                    for (int x = 0; x < Data.gameWidth; x++)
+                    {
+                        Data.tileMap[x, ((Data.gameHeight - 1) - y) + howManyRowsCleard] = Data.tileMap[x, (Data.gameHeight - 1) - y];
                     }
                 }
 
@@ -128,33 +131,24 @@ namespace Tetris2
 
                     howManyRowsCleard++;
                 }
-
-                if (howManyRowsCleard != 0)
-                {
-                    for (int x = 0; x < Data.gameWidth; x++)
-                    {
-                        Data.tileMap[x, (Data.gameHeight - 1) - y] = Data.tileMap[x, ((Data.gameHeight - 1) - y) - howManyRowsCleard];
-                        Data.tileMap[x, ((Data.gameHeight - 1) - y) - howManyRowsCleard].isSolid = false;
-                    }
-                }
             }
 
-            //if (howManyRowsCleard == 1)
-            //{
-            //    Data.score += 100;
-            //}
-            //else if (howManyRowsCleard == 2)
-            //{
-            //    Data.score += 300;
-            //}
-            //else if (howManyRowsCleard == 3)
-            //{
-            //    Data.score += 500;
-            //}
-            //else if (howManyRowsCleard == 4)
-            //{
-            //    Data.score += 800;
-            //}
+            if (howManyRowsCleard == 1)
+            {
+                Data.score += 100;
+            }
+            else if (howManyRowsCleard == 2)
+            {
+                Data.score += 300;
+            }
+            else if (howManyRowsCleard == 3)
+            {
+                Data.score += 500;
+            }
+            else if (howManyRowsCleard == 4)
+            {
+                Data.score += 800;
+            }
 
             howManyRowsCleard = 0;
         }
@@ -184,6 +178,11 @@ namespace Tetris2
             {
                 _spriteBatch.Draw(endScreanTileTexture, Vector2.Zero, Color.Black * 0.9f);
                 _spriteBatch.DrawString(font, "Game Ov er", new Vector2(Data.bufferWidth / 2 - 150, Data.bufferHeight / 2 - 50), Color.Red, 0, Vector2.Zero, 3, SpriteEffects.None, 0);
+            }
+            else if (pause)
+            {
+                _spriteBatch.Draw(endScreanTileTexture, Vector2.Zero, Color.Black * 0.9f);
+                _spriteBatch.DrawString(font, "Paused", new Vector2(Data.bufferWidth / 2 - 100, Data.bufferHeight / 2 - 50), Color.Red, 0, Vector2.Zero, 3, SpriteEffects.None, 0);
             }
 
             _spriteBatch.End();
