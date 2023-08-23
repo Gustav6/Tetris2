@@ -91,7 +91,7 @@ namespace Tetris2
         {
             int rnd = Data.RandomNumber(0, 7);
 
-            BlockLayout(0);
+            BlockLayout(rnd);
             for (int i = 0; i < position.Length; i++)
             {
                 position[i] += Data.blockSpawnOffset;
@@ -123,6 +123,16 @@ namespace Tetris2
                     }
 
                     if (testRotation.Y >= Data.gameHeight || testRotation.Y >= Data.gameHeight - 1 && color == Color.CadetBlue)
+                    {
+                        return;
+                    }
+
+                    if (color != Color.CadetBlue && Data.tileMap[testRotation.X, testRotation.Y].isSolid)
+                    {
+                        return;
+                    }
+                    
+                    if (color == Color.CadetBlue && testRotation.X !< Data.gameWidth && testRotation.X !> -1 && Data.tileMap[testRotation.X + 1, testRotation.Y].isSolid)
                     {
                         return;
                     }
@@ -212,7 +222,7 @@ namespace Tetris2
                     position[i].Y += 1;
                 }
 
-                timer = 0.2f;
+                timer = 0.5f;
             }
             else
             {
