@@ -13,10 +13,160 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin drop_sfx/fart-meme-sound.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:drop_sfx/fart-meme-sound.mp3
+
+#begin drop_sfx/maro-jump-sound-effect_1.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:drop_sfx/maro-jump-sound-effect_1.mp3
+
+#begin drop_sfx/movie_1_C2K5NH0.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:drop_sfx/movie_1_C2K5NH0.mp3
+
+#begin drop_sfx/the-beginning-of-sicko-mode-sound-effect-for-memes_xAcUeuI.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:drop_sfx/the-beginning-of-sicko-mode-sound-effect-for-memes_xAcUeuI.mp3
+
+#begin drop_sfx/videoplayback_y6EZG5Z.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:drop_sfx/videoplayback_y6EZG5Z.mp3
+
+#begin drop_sfx/vine-boom.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:drop_sfx/vine-boom.mp3
+
 #begin Font.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Font.spritefont
+
+#begin music/Initial D - Deja Vu.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music/Initial D - Deja Vu.mp3
+
+#begin music/Tobu - Candyland.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music/Tobu - Candyland.mp3
+
+#begin random_sfx/0loop.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/0loop.mp3
+
+#begin random_sfx/10TUM.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/10TUM.wav
+
+#begin random_sfx/11TAF.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/11TAF.wav
+
+#begin random_sfx/12OINK [higher2].wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/12OINK [higher2].wav
+
+#begin random_sfx/13EEH.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/13EEH.wav
+
+#begin random_sfx/14FART [adult].wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/14FART [adult].wav
+
+#begin random_sfx/15FIU.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/15FIU.wav
+
+#begin random_sfx/16CUMDROP.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/16CUMDROP.wav
+
+#begin random_sfx/1U.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/1U.wav
+
+#begin random_sfx/2UM.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/2UM.wav
+
+#begin random_sfx/3TOOT.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/3TOOT.wav
+
+#begin random_sfx/4TOOT [short].wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/4TOOT [short].wav
+
+#begin random_sfx/5OINK.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/5OINK.wav
+
+#begin random_sfx/6U [scary].wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/6U [scary].wav
+
+#begin random_sfx/7TUF.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/7TUF.wav
+
+#begin random_sfx/8OINK [higher].wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/8OINK [higher].wav
+
+#begin random_sfx/9FART [minor].wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:random_sfx/9FART [minor].wav
 
