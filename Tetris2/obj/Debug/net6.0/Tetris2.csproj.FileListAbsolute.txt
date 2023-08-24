@@ -119,7 +119,6 @@ C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\music\Initial D -
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\music\Tobu - Candyland.ogg
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\music\Tobu - Candyland.xnb
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\0loop.ogg
-C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\0loop.xnb
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\10TUM.xnb
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\11TAF.xnb
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\12OINK [higher2].xnb
@@ -130,7 +129,6 @@ C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\16CUMD
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\1U.xnb
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\2UM.xnb
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\3TOOT.xnb
-C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\4TOOT [short].xnb
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\5OINK.xnb
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\6U [scary].xnb
 C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\7TUF.xnb

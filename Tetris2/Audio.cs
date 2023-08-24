@@ -3,7 +3,9 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Tetris2;
 internal static class Audio
@@ -11,6 +13,8 @@ internal static class Audio
 	public static SoundEffect[] random_sfx;
 	public static SoundEffect[] random_drop_sfx;
 	public static Song[] songs;
+
+	public static Queue<int> song_queue;
 
 	private static Random rng = new();
 
@@ -50,8 +54,14 @@ internal static class Audio
 
 	public static void PlayRandomSong()
 	{
+		if (song_queue == null || song_queue.Count == 0)
+		{
+			song_queue = new Queue<int>(Enumerable.Range(0, songs.Length).OrderBy(x => rng.Next()));
+		}
+
 		MediaPlayer.Stop();
 		MediaPlayer.Volume = 0.5f;
 		MediaPlayer.Play(songs[rng.Next(songs.Length)]);
+		//MediaPlayer.Play(songs[song_queue.Dequeue()]);
 	}
 }

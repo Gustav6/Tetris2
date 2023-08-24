@@ -13,23 +13,23 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin drop_sfx/fart-meme-sound.mp3
-/importer:Mp3Importer
+#begin drop_sfx/fart-meme-sound.wav
+/importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:drop_sfx/fart-meme-sound.mp3
+/build:drop_sfx/fart-meme-sound.wav
 
-#begin drop_sfx/maro-jump-sound-effect_1.mp3
-/importer:Mp3Importer
+#begin drop_sfx/maro-jump-sound-effect_1.wav
+/importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:drop_sfx/maro-jump-sound-effect_1.mp3
+/build:drop_sfx/maro-jump-sound-effect_1.wav
 
-#begin drop_sfx/movie_1_C2K5NH0.mp3
-/importer:Mp3Importer
+#begin drop_sfx/movie_1_C2K5NH0.wav
+/importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:drop_sfx/movie_1_C2K5NH0.mp3
+/build:drop_sfx/movie_1_C2K5NH0.wav
 
 #begin drop_sfx/the-beginning-of-sicko-mode-sound-effect-for-memes_xAcUeuI.mp3
 /importer:Mp3Importer
@@ -37,17 +37,17 @@
 /processorParam:Quality=Best
 /build:drop_sfx/the-beginning-of-sicko-mode-sound-effect-for-memes_xAcUeuI.mp3
 
-#begin drop_sfx/videoplayback_y6EZG5Z.mp3
-/importer:Mp3Importer
+#begin drop_sfx/videoplayback_y6EZG5Z.wav
+/importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:drop_sfx/videoplayback_y6EZG5Z.mp3
+/build:drop_sfx/videoplayback_y6EZG5Z.wav
 
-#begin drop_sfx/vine-boom.mp3
-/importer:Mp3Importer
+#begin drop_sfx/vine-boom.wav
+/importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:drop_sfx/vine-boom.mp3
+/build:drop_sfx/vine-boom.wav
 
 #begin Font.spritefont
 /importer:FontDescriptionImporter
@@ -67,12 +67,6 @@
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:music/Tobu - Candyland.mp3
-
-#begin random_sfx/0loop.mp3
-/importer:Mp3Importer
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:random_sfx/0loop.mp3
 
 #begin random_sfx/10TUM.wav
 /importer:WavImporter
@@ -133,12 +127,6 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:random_sfx/3TOOT.wav
-
-#begin random_sfx/4TOOT [short].wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:random_sfx/4TOOT [short].wav
 
 #begin random_sfx/5OINK.wav
 /importer:WavImporter
