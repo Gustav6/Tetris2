@@ -1,1 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/fart-meme-sound.wav","C:/Users/8686/Desktop/Tetris2/Tetris2/Content/bin/DesktopGL/drop_sfx/fart-meme-sound.xnb","SoundEffectProcessor","SoundEffectContent",243930,243949,0,9690093
+"C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/maro-jump-sound-effect_1.wav","C:/Users/8686/Desktop/Tetris2/Tetris2/Content/bin/DesktopGL/drop_sfx/maro-jump-sound-effect_1.xnb","SoundEffectProcessor","SoundEffectContent",130014,130033,0,4331966
+"C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/movie_1_C2K5NH0.wav","C:/Users/8686/Desktop/Tetris2/Tetris2/Content/bin/DesktopGL/drop_sfx/movie_1_C2K5NH0.xnb","SoundEffectProcessor","SoundEffectContent",145194,145213,0,4341259
+"C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/videoplayback_y6EZG5Z.wav","C:/Users/8686/Desktop/Tetris2/Tetris2/Content/bin/DesktopGL/drop_sfx/videoplayback_y6EZG5Z.xnb","SoundEffectProcessor","SoundEffectContent",66338,66365,0,4148411
+"C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/vine-boom.wav","C:/Users/8686/Desktop/Tetris2/Tetris2/Content/bin/DesktopGL/drop_sfx/vine-boom.xnb","SoundEffectProcessor","SoundEffectContent",214380,214309,0,4351976
+"C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/1U.wav","C:/Users/8686/Desktop/Tetris2/Tetris2/Content/bin/DesktopGL/random_sfx/1U.xnb","SoundEffectProcessor","SoundEffectContent",29016,28969,0,4273417

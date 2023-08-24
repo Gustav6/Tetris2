@@ -76,3 +76,61 @@ C:\Users\gusta\Documents\Github\Tetris2\Tetris2\obj\Debug\net6.0\refint\Tetris2.
 C:\Users\gusta\Documents\Github\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.pdb
 C:\Users\gusta\Documents\Github\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.genruntimeconfig.cache
 C:\Users\gusta\Documents\Github\Tetris2\Tetris2\obj\Debug\net6.0\ref\Tetris2.dll
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\Font.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Tetris2.exe
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Tetris2.deps.json
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Tetris2.runtimeconfig.json
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Tetris2.dll
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Tetris2.pdb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\MonoGame.Framework.dll
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.csproj.AssemblyReference.cache
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.AssemblyInfoInputs.cache
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.AssemblyInfo.cs
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.csproj.CoreCompileInputs.cache
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.csproj.CopyComplete
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.dll
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\refint\Tetris2.dll
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.pdb
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\Tetris2.genruntimeconfig.cache
+C:\Users\8686\Desktop\Tetris2\Tetris2\obj\Debug\net6.0\ref\Tetris2.dll
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\fart-meme-sound.ogg
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\fart-meme-sound.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\maro-jump-sound-effect_1.ogg
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\maro-jump-sound-effect_1.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\movie_1_C2K5NH0.ogg
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\movie_1_C2K5NH0.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\the-beginning-of-sicko-mode-sound-effect-for-memes_xAcUeuI.ogg
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\the-beginning-of-sicko-mode-sound-effect-for-memes_xAcUeuI.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\videoplayback_y6EZG5Z.ogg
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\videoplayback_y6EZG5Z.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\vine-boom.ogg
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\drop_sfx\vine-boom.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\music\Initial D - Deja Vu.ogg
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\music\Initial D - Deja Vu.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\music\Tobu - Candyland.ogg
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\music\Tobu - Candyland.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\0loop.ogg
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\10TUM.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\11TAF.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\12OINK [higher2].xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\13EEH.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\14FART [adult].xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\15FIU.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\16CUMDROP.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\1U.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\2UM.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\3TOOT.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\5OINK.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\6U [scary].xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\7TUF.xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\8OINK [higher].xnb
+C:\Users\8686\Desktop\Tetris2\Tetris2\bin\Debug\net6.0\Content\random_sfx\9FART [minor].xnb

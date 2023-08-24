@@ -17,7 +17,7 @@ namespace Tetris2
         public int RotationIndex = 0;
 
         public float timer = 0.5f;
-        public float addTimer = 0.5f; 
+        public float addTimer = 0.5f;
 
         public Block()
         {
@@ -38,16 +38,16 @@ namespace Tetris2
                     position[0] = new Point(0, 0);
                     position[1] = new Point(-1, 0);
                     position[2] = new Point(1, 0);
-                    position[3] = new Point(2, 0);  
+                    position[3] = new Point(2, 0);
                     color = Color.CadetBlue;
-                    break; 
+                    break;
                 case 1: // LBlock
                     position[0] = new Point(0, 0);
                     position[1] = new Point(-1, 0);
                     position[2] = new Point(1, 0);
                     position[3] = new Point(1, -1);
                     color = Color.Orange;
-                    break; 
+                    break;
                 case 2: // JBlock
                     position[0] = new Point(0, 0);
                     position[1] = new Point(-1, 0);
@@ -131,7 +131,7 @@ namespace Tetris2
                     {
                         return;
                     }
-                    
+
                     if (color == Color.CadetBlue && testRotation.X !< Data.gameWidth && testRotation.X !> -1 && Data.tileMap[testRotation.X + 1, testRotation.Y].isSolid)
                     {
                         return;
@@ -180,6 +180,8 @@ namespace Tetris2
 
         public void Controls()
         {
+            var oldPosition = position[1];
+
             if (Input.HasBeenPressed(Keys.Left) && CanMoveLeft())
             {
                 for (int i = 0; i < position.Length; i++)
@@ -210,6 +212,14 @@ namespace Tetris2
             if (Input.HasBeenPressed(Keys.R))
             {
                 Rotate();
+            }
+
+            if (oldPosition != position[1])
+            {
+                if (Input.HasBeenPressed(Keys.Down))
+                    Audio.PlayRandomDropSFX();
+                else
+                    Audio.PlayRandomSFX();
             }
         }
 

@@ -1,6 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+using System.IO;
 using System.Runtime.CompilerServices;
 
 namespace Tetris2
@@ -51,12 +54,17 @@ namespace Tetris2
             Data.tileTexture.SetData<Color>(colorArray);
 
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            Audio.Initialize(Content);
         }
 
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
+            if (MediaPlayer.State == MediaState.Paused || MediaPlayer.State == MediaState.Stopped)
+                Audio.PlayRandomSong();
 
             Input.GetStateCall();
 
@@ -159,7 +167,7 @@ namespace Tetris2
 
             _spriteBatch.Begin();
 
-            _spriteBatch.DrawString(font, "Score: " + Data.score.ToString(), new Vector2(500, 25), Color.LawnGreen, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+            _spriteBatch.DrawString(font, "Penis: " + Data.score.ToString(), new Vector2(500, 25), Color.LawnGreen, 0, Vector2.Zero, 0.75f, SpriteEffects.None, 0);
 
             for (int x = 0; x < Data.gameWidth; x++)
             {
@@ -177,12 +185,12 @@ namespace Tetris2
             if (GameOver())
             {
                 _spriteBatch.Draw(endScreanTileTexture, Vector2.Zero, Color.Black * 0.9f);
-                _spriteBatch.DrawString(font, "Game Ov er", new Vector2(Data.bufferWidth / 2 - 150, Data.bufferHeight / 2 - 50), Color.Red, 0, Vector2.Zero, 3, SpriteEffects.None, 0);
+                _spriteBatch.DrawString(font, "Game Over (loser trash)", new Vector2(Data.bufferWidth / 2 - 150, Data.bufferHeight / 2 - 50), Color.Red, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
             }
             else if (pause)
             {
                 _spriteBatch.Draw(endScreanTileTexture, Vector2.Zero, Color.Black * 0.9f);
-                _spriteBatch.DrawString(font, "Paused", new Vector2(Data.bufferWidth / 2 - 100, Data.bufferHeight / 2 - 50), Color.Red, 0, Vector2.Zero, 3, SpriteEffects.None, 0);
+                _spriteBatch.DrawString(font, "Paused", new Vector2(Data.bufferWidth / 2 - 100, Data.bufferHeight / 2 - 50), Color.Red, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
             }
 
             _spriteBatch.End();

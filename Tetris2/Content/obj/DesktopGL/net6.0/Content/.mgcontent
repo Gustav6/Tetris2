@@ -4,9 +4,55 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/gusta/Documents/Github/Tetris2/Tetris2/Content/Font.spritefont</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/fart-meme-sound.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/maro-jump-sound-effect_1.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/movie_1_C2K5NH0.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/the-beginning-of-sicko-mode-sound-effect-for-memes_xAcUeuI.mp3</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/videoplayback_y6EZG5Z.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/drop_sfx/vine-boom.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/Font.spritefont</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/music/Initial D - Deja Vu.mp3</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/music/Tobu - Candyland.mp3</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/10TUM.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/11TAF.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/12OINK [higher2].wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/13EEH.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/14FART [adult].wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/15FIU.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/16CUMDROP.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/1U.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/2UM.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/3TOOT.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/5OINK.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/6U [scary].wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/7TUF.wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/8OINK [higher].wav</File>
+    <File>C:/Users/8686/Desktop/Tetris2/Tetris2/Content/random_sfx/9FART [minor].wav</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
