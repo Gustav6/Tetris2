@@ -24,6 +24,7 @@ namespace Tetris2
 
         public static Texture2D tileTexture;
 
+        public static float lowerTimer;
         public static Block block;
         public static Point blockSpawnOffset = new Point(Data.gameWidth / 2 - 1, 2);
 
@@ -32,6 +33,19 @@ namespace Tetris2
         public static int score = 0;
 
         private static readonly Random random = new Random();
+        
+        public static void CreateBlock()
+        {
+            Data.block = new Block();
+
+            int rnd = Data.RandomNumber(0, 7);
+
+            block.BlockLayout(rnd);
+            for (int i = 0; i < block.position.Length; i++)
+            {
+                block.position[i] += Data.blockSpawnOffset;
+            }
+        }
 
         public static void AddBlockToTileMap()
         {

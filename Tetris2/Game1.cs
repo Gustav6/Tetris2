@@ -76,7 +76,8 @@ namespace Tetris2
             }
             else if (Data.block == null && !GameOver() && !pause)
             {
-                SpawnBlock();
+                CheckTileMap(); 
+                Data.CreateBlock();
             }
 
             base.Update(gameTime);
@@ -94,21 +95,15 @@ namespace Tetris2
             return false;
         }
 
-        public void SpawnBlock()
-        {
-            CheckTileMap();
-            Data.block = new Block();
-        }
-
         public void CheckTileMap()
         {
-            for (int y = 0; y < Data.gameHeight; y++)
+            for (int y = Data.gameHeight - 1; y >= 0; y--)
             {
                 canClearRow = true;
 
                 for (int x = 0; x < Data.gameWidth; x++)
                 {
-                    if (Data.tileMap[x, (Data.gameHeight - 1) - y].isSolid == false)
+                    if (Data.tileMap[x, y].isSolid == false)
                     {
                         canClearRow = false;
                     }
@@ -118,7 +113,7 @@ namespace Tetris2
                 {
                     for (int x = 0; x < Data.gameWidth; x++)
                     {
-                        Data.tileMap[x, ((Data.gameHeight - 1) - y) + howManyRowsCleard] = Data.tileMap[x, (Data.gameHeight - 1) - y];
+                        Data.tileMap[x, y + howManyRowsCleard] = Data.tileMap[x, y];
                     }
                 }
 
@@ -126,7 +121,7 @@ namespace Tetris2
                 {
                     for (int x = 0; x < Data.gameWidth; x++)
                     {
-                        Data.tileMap[x, (Data.gameHeight - 1) - y].isSolid = false;
+                        Data.tileMap[x, y].isSolid = false;
                     }
 
                     howManyRowsCleard++;
@@ -159,7 +154,7 @@ namespace Tetris2
 
             _spriteBatch.Begin();
 
-            _spriteBatch.DrawString(font, "Score: " + Data.score.ToString(), new Vector2(500, 25), Color.LawnGreen, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+            _spriteBatch.DrawString(font, "Score: " + Data.score.ToString(), new Vector2(500, 25), Color.LawnGreen, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
 
             for (int x = 0; x < Data.gameWidth; x++)
             {
@@ -177,12 +172,12 @@ namespace Tetris2
             if (GameOver())
             {
                 _spriteBatch.Draw(endScreanTileTexture, Vector2.Zero, Color.Black * 0.9f);
-                _spriteBatch.DrawString(font, "Game Ov er", new Vector2(Data.bufferWidth / 2 - 150, Data.bufferHeight / 2 - 50), Color.Red, 0, Vector2.Zero, 3, SpriteEffects.None, 0);
+                _spriteBatch.DrawString(font, "Game Over", new Vector2(Data.bufferWidth / 2 - 150, Data.bufferHeight / 2 - 50), Color.Red, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
             }
             else if (pause)
             {
                 _spriteBatch.Draw(endScreanTileTexture, Vector2.Zero, Color.Black * 0.9f);
-                _spriteBatch.DrawString(font, "Paused", new Vector2(Data.bufferWidth / 2 - 100, Data.bufferHeight / 2 - 50), Color.Red, 0, Vector2.Zero, 3, SpriteEffects.None, 0);
+                _spriteBatch.DrawString(font, "Paused", new Vector2(Data.bufferWidth / 2 - 100, Data.bufferHeight / 2 - 50), Color.Red, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
             }
 
             _spriteBatch.End();

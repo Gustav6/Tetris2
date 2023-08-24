@@ -14,15 +14,11 @@ namespace Tetris2
     {
         public Point[] position = new Point[4];
         public Color color;
-        public int RotationIndex = 0;
 
-        public float timer = 0.5f;
-        public float addTimer = 0.5f; 
-
-        public Block()
-        {
-            CreateBlock();
-        }
+        private int RotationIndex = 0;
+        private float timer;
+        private float moveDownTimer = 0.5f - Data.lowerTimer;
+        private float addTimer = 0.5f; 
 
         public void Update(GameTime gameTime)
         {
@@ -87,22 +83,11 @@ namespace Tetris2
             }
         }
 
-        public void CreateBlock()
-        {
-            int rnd = Data.RandomNumber(0, 7);
-
-            BlockLayout(rnd);
-            for (int i = 0; i < position.Length; i++)
-            {
-                position[i] += Data.blockSpawnOffset;
-            }
-        }
-
         public void Rotate()
         {
             if (color != Color.Yellow)
             {
-                for (int i = 1; i < 4; i++)
+                for (int i = 0; i < position.Length; i++)
                 {
                     Point testRotation = position[i];
 
@@ -136,11 +121,15 @@ namespace Tetris2
                     {
                         return;
                     }
+                    else if (color == Color.CadetBlue && testRotation.X !< Data.gameWidth && testRotation.X !> -1 && testRotation.Y < Data.gameHeight && Data.tileMap[testRotation.X, testRotation.Y + 1].isSolid)
+                    {
+                        return;
+                    }
                 }
 
                 if (RotationIndex == 0)
                 {
-                    for (int i = 1; i < 4; i++)
+                    for (int i = 0; i < position.Length; i++)
                     {
                         Point point = position[i];
 
@@ -187,6 +176,7 @@ namespace Tetris2
                     position[i].X -= 1;
                 }
             }
+
             if(Input.HasBeenPressed(Keys.Right) && CanMoveRight())
             {
                 for (int i = 0; i < position.Length; i++)
@@ -195,7 +185,21 @@ namespace Tetris2
                 }
             }
 
-            if (Input.HasBeenPressed(Keys.Down))
+            if (Input.IsPressed(Keys.Down))
+            {
+                moveDownTimer = 0.1f;
+            }
+            else 
+            {
+                moveDownTimer = Data.lowerTimer;
+            }
+
+            if (Input.HasBeenPressed(Keys.Up))
+            {
+                Rotate();
+            }
+
+            if (Input.HasBeenPressed(Keys.Space))
             {
                 while (CanMoveDown())
                 {
@@ -204,12 +208,8 @@ namespace Tetris2
                         position[i].Y += 1;
                     }
                 }
-                addTimer = 0;
-            }
 
-            if (Input.HasBeenPressed(Keys.R))
-            {
-                Rotate();
+                addTimer = 0;
             }
         }
 
@@ -222,7 +222,7 @@ namespace Tetris2
                     position[i].Y += 1;
                 }
 
-                timer = 0.5f;
+                timer = moveDownTimer;
             }
             else
             {
@@ -270,8 +270,8 @@ namespace Tetris2
         {
             if (!CanMoveDown() && addTimer <= 0)
             {
+                Data.lowerTimer = 0.1f;
                 Data.AddBlockToTileMap();
-                addTimer = 0.5f;
                 return false;
             }
             else if (!CanMoveDown())
