@@ -16,12 +16,14 @@ namespace Tetris2
         public Color color;
 
         private int RotationIndex = 0;
-        private float timer;
-        private float moveDownTimer = 0.5f - Data.lowerTimer;
+        private int shadowPos;
+        private float timer = 1;
+        private float moveDownTimer = 1f;
         private float addTimer = 0.5f; 
 
         public void Update(GameTime gameTime)
         {
+            CalculateShadowPos();
             MoveBlockDown(gameTime);
             Controls();
         }
@@ -222,7 +224,8 @@ namespace Tetris2
                     position[i].Y += 1;
                 }
 
-                timer = moveDownTimer;
+                shadowPos--;
+                timer = 1;
             }
             else
             {
@@ -282,11 +285,38 @@ namespace Tetris2
             return true;
         }
 
+        public Vector2 CalculateShadowPos()
+        {
+            for (int y = 0; y < Data.tileMap.GetLength(1); y++)
+            {
+                for (int i = 0; i < position.Length; i++)
+                {
+                    if (Data.tileMap[position[i].X, y].isSolid)
+                    {
+                        return new Vector2(position[i].X, y - 1);
+                    }
+                    else if (y == Data.tileMap.GetLength(1) - 1)
+                    {
+                        return new Vector2(position[i].X, y);
+                    }
+                }
+            }
+
+            return Vector2.Zero;
+        }
+
+        public void DrawShadow(SpriteBatch spriteBatch, int i)
+        {
+            Vector2 temp = new((int)(position[i].X * Data.tileMapLocation + Data.tileMapOffset), (int)(CalculateShadowPos().Y * Data.tileMapLocation + Data.tileMapOffset));
+            spriteBatch.Draw(Data.tileTexture, temp, color);
+        }
+
         public void Draw(SpriteBatch spriteBatch)
         {
             for (int i = 0; i < position.Length; i++)
             {
-                spriteBatch.Draw(Data.tileTexture, new Vector2 (position[i].X * Data.tileMapLocation + Data.tileMapOffset, position[i].Y * Data.tileMapLocation + Data.tileMapOffset), color);
+                DrawShadow(spriteBatch, i);
+                spriteBatch.Draw(Data.tileTexture, new Vector2((int)(position[i].X * Data.tileMapLocation + Data.tileMapOffset), (int)(position[i].Y * Data.tileMapLocation + Data.tileMapOffset)), color);
             }
         }
     }

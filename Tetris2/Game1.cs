@@ -160,7 +160,7 @@ namespace Tetris2
             {
                 for (int y = 0; y < Data.gameHeight; y++)
                 {
-                    _spriteBatch.Draw(Data.tileTexture, new Vector2(x * Data.tileMapLocation + Data.tileMapOffset, y * Data.tileMapLocation + Data.tileMapOffset), Data.tileMap[x, y].isSolid ? Data.tileMap[x, y].color : Color.White * 0.5f);
+                    _spriteBatch.Draw(Data.tileTexture, new Vector2((int)(x * Data.tileMapLocation + Data.tileMapOffset), (int)(y * Data.tileMapLocation + Data.tileMapOffset)), Data.tileMap[x, y].isSolid ? Data.tileMap[x, y].color : Color.White * 0.5f);
                 }
             }
 

@@ -19,20 +19,20 @@ namespace Tetris2
         public static int gameWidth = 10;
         public static int gameHeight = 22;
         public static int tileMapOffset = 20;
-        public static float tileSpace = 1.1f;
+        public static float tileSpace = 1.14f;
         public static float tileMapLocation = Data.tileSize * Data.tileSpace;
 
         public static Texture2D tileTexture;
 
         public static float lowerTimer;
         public static Block block;
-        public static Point blockSpawnOffset = new Point(Data.gameWidth / 2 - 1, 2);
+        public static Point blockSpawnOffset = new(Data.gameWidth / 2 - 1, 2);
 
         public static Tile[,] tileMap;
 
         public static int score = 0;
 
-        private static readonly Random random = new Random();
+        private static readonly Random random = new();
         
         public static void CreateBlock()
         {
@@ -45,6 +45,10 @@ namespace Tetris2
             {
                 block.position[i] += Data.blockSpawnOffset;
             }
+        }
+        public static bool InBounds(int x, int y)
+        {
+            return 0 <= y && y < Data.tileMap.GetLength(1) && 0 <= x && x < Data.tileMap.GetLength(0);
         }
 
         public static void AddBlockToTileMap()
