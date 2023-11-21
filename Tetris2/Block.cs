@@ -16,7 +16,6 @@ namespace Tetris2
         public Color color;
 
         private int RotationIndex = 0;
-        private int shadowPos;
         private float timer = 1;
         private float moveDownTimer = 1f;
         private float addTimer = 0.5f; 
@@ -193,7 +192,7 @@ namespace Tetris2
             }
             else 
             {
-                moveDownTimer = Data.lowerTimer;
+                moveDownTimer = 0.5f;
             }
 
             if (Input.HasBeenPressed(Keys.Up))
@@ -224,8 +223,7 @@ namespace Tetris2
                     position[i].Y += 1;
                 }
 
-                shadowPos--;
-                timer = 1;
+                timer = moveDownTimer;
             }
             else
             {
@@ -285,37 +283,64 @@ namespace Tetris2
             return true;
         }
 
-        public Vector2 CalculateShadowPos()
+        public List<Point> CalculateShadowPos()
         {
+            List<Point> shadowPos = new();
+
             for (int y = 0; y < Data.tileMap.GetLength(1); y++)
             {
+                bool hasFound = false;
+
                 for (int i = 0; i < position.Length; i++)
                 {
-                    if (Data.tileMap[position[i].X, y].isSolid)
+                    Point point = position[i];
+
+                    point -= position[0];
+
+                    if (y == Data.tileMap.GetLength(1) - 1 - point.Y || Data.InBounds(position[i].X, y + 1 + point.Y) && Data.tileMap[position[i].X, y + 1 + point.Y].isSolid)
                     {
-                        return new Vector2(position[i].X, y - 1);
+                        hasFound = true;
                     }
-                    else if (y == Data.tileMap.GetLength(1) - 1)
+                }
+
+                if (hasFound)
+                {
+                    for (int i = 0; i < position.Length; i++)
                     {
-                        return new Vector2(position[i].X, y);
+                        Point point = position[i];
+
+                        point -= position[0];
+
+                        Point newPoint = new(position[i].X, y);
+
+                        newPoint.Y += point.Y;
+
+                        shadowPos.Add(newPoint);
                     }
+                    break;
                 }
             }
 
-            return Vector2.Zero;
+            return shadowPos;
         }
 
-        public void DrawShadow(SpriteBatch spriteBatch, int i)
+        public void DrawShadow(SpriteBatch spriteBatch)
         {
-            Vector2 temp = new((int)(position[i].X * Data.tileMapLocation + Data.tileMapOffset), (int)(CalculateShadowPos().Y * Data.tileMapLocation + Data.tileMapOffset));
-            spriteBatch.Draw(Data.tileTexture, temp, color);
+            List<Point> temp = CalculateShadowPos();
+
+            for (int i = 0; i < temp.Count; i++)
+            {
+                Vector2 pos = new((int)(temp[i].X * Data.tileMapLocation + Data.tileMapOffset), (int)(temp[i].Y * Data.tileMapLocation + Data.tileMapOffset));
+                spriteBatch.Draw(Data.tileTexture, pos, color * 0.5f);
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            DrawShadow(spriteBatch);
+
             for (int i = 0; i < position.Length; i++)
             {
-                DrawShadow(spriteBatch, i);
                 spriteBatch.Draw(Data.tileTexture, new Vector2((int)(position[i].X * Data.tileMapLocation + Data.tileMapOffset), (int)(position[i].Y * Data.tileMapLocation + Data.tileMapOffset)), color);
             }
         }
