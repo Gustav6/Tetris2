@@ -17,9 +17,10 @@ namespace Tetris2
 
         public Game1()
         {
-            _graphics = new GraphicsDeviceManager(this);
+            _graphics = new(this);
             _graphics.PreferredBackBufferHeight = Data.bufferHeight;
             _graphics.PreferredBackBufferWidth = Data.bufferWidth;
+            _graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -160,7 +161,7 @@ namespace Tetris2
             {
                 for (int y = 0; y < Data.gameHeight; y++)
                 {
-                    _spriteBatch.Draw(Data.tileTexture, new Vector2((int)(x * Data.tileMapLocation + Data.tileMapOffset), (int)(y * Data.tileMapLocation + Data.tileMapOffset)), Data.tileMap[x, y].isSolid ? Data.tileMap[x, y].color : Color.White * 0.5f);
+                    _spriteBatch.Draw(Data.tileTexture, new Vector2((int)(x * Data.tileMapLocation + Data.tileMapOffset), (int)(y * Data.tileMapLocation + Data.tileMapOffset)), Data.tileMap[x, y].isSolid ? Data.tileMap[x, y].color : Color.DarkSlateGray);
                 }
             }
 

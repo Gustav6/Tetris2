@@ -36,7 +36,7 @@ namespace Tetris2
                     position[1] = new Point(-1, 0);
                     position[2] = new Point(1, 0);
                     position[3] = new Point(2, 0);  
-                    color = Color.CadetBlue;
+                    color = Color.CornflowerBlue;
                     break; 
                 case 1: // LBlock
                     position[0] = new Point(0, 0);
@@ -98,31 +98,31 @@ namespace Tetris2
 
                     testRotation += position[0];
 
-                    if (testRotation.X >= Data.gameWidth && color != Color.CadetBlue || testRotation.X >= Data.gameWidth - 1 && color == Color.CadetBlue)
+                    if (testRotation.X >= Data.gameWidth && color != Color.CornflowerBlue || testRotation.X >= Data.gameWidth - 1 && color == Color.CornflowerBlue)
                     {
                         return;
                     }
 
-                    if (testRotation.X <= -1 && color != Color.CadetBlue || testRotation.X <= -2 && color == Color.CadetBlue)
+                    if (testRotation.X <= -1 && color != Color.CornflowerBlue || testRotation.X <= -2 && color == Color.CornflowerBlue)
                     {
                         return;
                     }
 
-                    if (testRotation.Y >= Data.gameHeight || testRotation.Y >= Data.gameHeight - 1 && color == Color.CadetBlue)
+                    if (testRotation.Y >= Data.gameHeight || testRotation.Y >= Data.gameHeight - 1 && color == Color.CornflowerBlue)
                     {
                         return;
                     }
 
-                    if (color != Color.CadetBlue && Data.tileMap[testRotation.X, testRotation.Y].isSolid)
+                    if (color != Color.CornflowerBlue && Data.tileMap[testRotation.X, testRotation.Y].isSolid)
                     {
                         return;
                     }
                     
-                    if (color == Color.CadetBlue && testRotation.X !< Data.gameWidth && testRotation.X !> -1 && Data.tileMap[testRotation.X + 1, testRotation.Y].isSolid)
+                    if (color == Color.CornflowerBlue && testRotation.X !< Data.gameWidth && testRotation.X !> -1 && Data.tileMap[testRotation.X + 1, testRotation.Y].isSolid)
                     {
                         return;
                     }
-                    else if (color == Color.CadetBlue && testRotation.X !< Data.gameWidth && testRotation.X !> -1 && testRotation.Y < Data.gameHeight && Data.tileMap[testRotation.X, testRotation.Y + 1].isSolid)
+                    else if (color == Color.CornflowerBlue && testRotation.X !< Data.gameWidth && testRotation.X !> -1 && testRotation.Y < Data.gameHeight && Data.tileMap[testRotation.X, testRotation.Y + 1].isSolid)
                     {
                         return;
                     }
@@ -331,7 +331,7 @@ namespace Tetris2
             for (int i = 0; i < temp.Count; i++)
             {
                 Vector2 pos = new((int)(temp[i].X * Data.tileMapLocation + Data.tileMapOffset), (int)(temp[i].Y * Data.tileMapLocation + Data.tileMapOffset));
-                spriteBatch.Draw(Data.tileTexture, pos, color * 0.5f);
+                spriteBatch.Draw(Data.tileTexture, pos, Color.DarkGray * 0.5f);
             }
         }
 
